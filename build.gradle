@@ -32,13 +32,13 @@ tasks.register('buildAndPushMultiArchImage', Exec) {
     // TODO add ghcr.io 
     commandLine 'docker', 'buildx', 'build',
                 '--platform', 'linux/amd64,linux/arm64',
-                '-t', "sogis/ili2c-web-service:0",
-                '-t', "sogis/ili2c-web-service:0.0",
-                '-t', "sogis/ili2c-web-service:0.0.$buildNumber",
-                '-t', "sogis/ili2c-web-service:latest",
-                '--label', "ili2c-web-service.created=$build_timestamp", 
-                '--label', "ili2c-web-service.git_commit=$githash",
-                '--label', "ili2c-web-service.version=$version",
+                '-t', "sogis/ilitools-web-service:0",
+                '-t', "sogis/ilitools-web-service:0.0",
+                '-t', "sogis/ilitools-web-service:0.0.$buildNumber",
+                '-t', "sogis/ilitools-web-service:latest",
+                '--label', "ilitools-web-service.created=$build_timestamp", 
+                '--label', "ilitools-web-service.git_commit=$githash",
+                '--label', "ilitools-web-service.version=$version",
                 //'-f', 'Dockerfile',  '.', '--push'
                 '-f', 'Dockerfile',  '.'
 }
