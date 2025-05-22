@@ -17,7 +17,7 @@ ili.sogeo.services {
     }
 
     handle_path /api/compile {
-        rewrite * /ili2c/{path}
+        rewrite * /ili2c{path}
         reverse_proxy iliws:8080
     }
 
