@@ -17,6 +17,7 @@ configurations {
 
 dependencies {
     dwnld "io.github.sogis:ili2c-web-service:5.6.3-14:plain@war"
+    dwnld "io.github.sogis:iliprettyprint-web-service:0.0.46:plain@war"
 }
 
 tasks.register('copyDependencies', Copy) {
@@ -32,15 +33,15 @@ tasks.register('buildAndPushMultiArchImage', Exec) {
     // TODO add ghcr.io 
     commandLine 'docker', 'buildx', 'build',
                 '--platform', 'linux/amd64,linux/arm64',
-                '-t', "sogis/ilitools-web-service:0",
-                '-t', "sogis/ilitools-web-service:0.0",
-                '-t', "sogis/ilitools-web-service:0.0.$buildNumber",
-                '-t', "sogis/ilitools-web-service:latest",
-                '--label', "ilitools-web-service.created=$build_timestamp", 
-                '--label', "ilitools-web-service.git_commit=$githash",
-                '--label', "ilitools-web-service.version=$version",
-                //'-f', 'Dockerfile',  '.', '--push'
-                '-f', 'Dockerfile',  '.'
+                '-t', "sogis/ili-web-service:0",
+                '-t', "sogis/ili-web-service:0.0",
+                '-t', "sogis/ili-web-service:0.0.$buildNumber",
+                '-t', "sogis/ili-web-service:latest",
+                '--label', "ili-web-service.created=$build_timestamp", 
+                '--label', "ili-web-service.git_commit=$githash",
+                '--label', "ili-web-service.version=$version",
+                '-f', 'Dockerfile',  '.', '--push'
+                //'-f', 'Dockerfile',  '.'
 }
 
 def getCheckedOutGitCommitHash() {
