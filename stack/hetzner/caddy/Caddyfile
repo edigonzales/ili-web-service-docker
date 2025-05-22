@@ -11,7 +11,19 @@ ili.sogeo.services {
     #    ca https://acme-staging-v02.api.letsencrypt.org/directory
     #}
 
-    reverse_proxy iliws:8080
+    log {
+        output stdout
+        format console
+    }
 
-    log stdout
+    @compile path /api/compile*
+    rewrite @compile /ili2c{uri}
+    reverse_proxy @compile iliws:8080
+
+    @prettyprint path /api/prettyprint*
+    rewrite @prettyprint /iliprettyprint{uri}
+    reverse_proxy @prettyprint iliws:8080
+
+    @uml path /api/uml*
+    rewrite @uml /iliprettyprint{uri}
 }
