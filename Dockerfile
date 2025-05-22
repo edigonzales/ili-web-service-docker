@@ -12,7 +12,7 @@ COPY build/dwnld/ili2c-web-service-*.war /usr/local/tomcat/webapps/ili2c.war
 COPY build/dwnld/iliprettyprint-web-service-*.war /usr/local/tomcat/webapps/iliprettyprint.war
 
 ENV JAVA_OPTS="-XX:+UseParallelGC -XX:MaxRAMPercentage=80.0"
-ENV CATALINA_TMPDIR /tmp
+#ENV CATALINA_TMPDIR /tmp
 
 EXPOSE 8080
 
