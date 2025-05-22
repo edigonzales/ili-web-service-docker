@@ -14,14 +14,14 @@
 ```
 #cloud-config
 users:
-  - name: ili2cws
+  - name: iliws
     shell: /bin/bash
     groups: docker
 
 package_upgrade: false
 
 runcmd:
-  - [su, ili2cws, -c, "git clone https://github.com/edigonzales/ili2c-web-service.git /home/ili2cws/ili2c-web-service"]
+  - [su, iliws, -c, "git clone https://github.com/edigonzales/ili-web-service-docker.git /home/iliws/ili-web-service-docker"]
 ```
 
 - Anwendung starten: todo (siehe unten)
@@ -34,13 +34,13 @@ ssh root@xxxxxxxxxx
 ```
 
 ```
-sudo su ili2cws
+sudo su iliws
 ```
 
 ```
-cd && git clone https://github.com/edigonzales/ili2c-web-service.git 
+cd && git clone https://github.com/edigonzales/ili-web-service-docker.git 
 ```
 
 ```
-docker compose -f ili2c-web-service/stack/hetzner/docker-compose.yml -p ili2c-web-service up
+docker compose -f ili-web-service-docker/stack/hetzner/docker-compose.yml -p ili-web-service up
 ```
