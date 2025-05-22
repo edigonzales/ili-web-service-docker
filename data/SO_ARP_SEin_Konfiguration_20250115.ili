@@ -30,7 +30,7 @@ Status_Geschaeft = (
     foo,
     bar
 );
-
+asd
 
 CLASS MyBase (ABSTRACT) =
   aId : TEXT*10;
