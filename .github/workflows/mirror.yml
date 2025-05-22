@@ -20,6 +20,6 @@ jobs:
       - name: Mirror commits to Codeberg
         uses: spyoungtech/mirror-action@v0.7.0
         with:
-          REMOTE: "https://codeberg.org/edigonzales/ili-web-service.git"
+          REMOTE: "https://codeberg.org/sogis/ili-web-service-docker.git"
           GIT_USERNAME: ${{ secrets.CODEBERG_USER }}
           GIT_PASSWORD: ${{ secrets.CODEBERG_PASSWORD }}
