@@ -20,8 +20,5 @@ ili.sogeo.services {
         rewrite * /ili2c{uri}
     }
 
-    reverse_proxy /prettyprint/api/* iliws:8080 {
-        rewrite * /iliprettyprint{uri}
-    }
 
 }
