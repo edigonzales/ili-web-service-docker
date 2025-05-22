@@ -1,1 +1,1 @@
-# ili2c-web-service-docker
+# ili-web-service-docker
