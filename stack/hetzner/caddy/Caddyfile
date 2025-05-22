@@ -16,13 +16,19 @@ ili.sogeo.services {
         format console
     }
 
-    handle_path /api/compile {
-        rewrite * /ili2c{path}
-        reverse_proxy iliws:8080
+    # Handle ili2c compile API requests
+    handle /api/compile {
+        reverse_proxy iliws:8080 {
+            # Rewrite to the ili2c context path
+            rewrite * /ili2c/api/compile
+        }
     }
-
-    handle_path /api/prettyprint {
-        rewrite * /iliprettyprint{path}
-        reverse_proxy iliws:8080
+    
+    # Handle iliprettyprint API requests
+    handle /api/prettyprint {
+        reverse_proxy iliws:8080 {
+            # Rewrite to the iliprettyprint context path
+            rewrite * /iliprettyprint/api/prettyprint
+        }
     }
 }
