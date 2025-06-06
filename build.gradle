@@ -17,7 +17,7 @@ configurations {
 
 dependencies {
     dwnld "io.github.sogis:ili2c-web-service:5.6.3-14:plain@war"
-    dwnld "io.github.sogis:iliprettyprint-web-service:0.0.46:plain@war"
+    dwnld "io.github.sogis:iliprettyprint-web-service:0.0.60:plain@war"
 }
 
 tasks.register('copyDependencies', Copy) {

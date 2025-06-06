@@ -29,7 +29,7 @@ Text;
 Status_Geschaeft = (
     foo,
     bar
-);
+); 
 
 
 CLASS MyBase (ABSTRACT) =
