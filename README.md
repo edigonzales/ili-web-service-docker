@@ -9,4 +9,8 @@ curl -v -X POST -F "file=@data/SO_ARP_SEin_Konfiguration_20250115.ili" http://lo
 ```
 curl -v -X POST -F "file=@data/SO_ARP_SEin_Konfiguration_20250115.ili" https://ili.sogeo.services/api/compile 
 
-```asdf
+```
+
+``` 
+docker compose -f ili-web-service-docker/stack/hetzner/docker-compose.yml -p ili-web-service up -d
+```
