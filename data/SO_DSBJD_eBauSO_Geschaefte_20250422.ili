@@ -15,7 +15,7 @@ AT "https://bjd.so.ch"
 VERSION "2025-04-22"  =
   IMPORTS GeometryCHLV95_V2;
   
-  DOMAIN
+  DOMAIN 
 
     !! TODO Aufzähltypen: Falls es nicht geht, muss es in der Darstellung ein "andere" geben und hässlich einfärben.
 
